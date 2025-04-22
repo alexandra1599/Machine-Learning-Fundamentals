@@ -8,7 +8,7 @@ The first step is to download the dataset, and define a dictionary. Here, we wil
 
 ## STEP 2 : BUILD THE MODEL 
 
-We will use a very simple model called Ordinary Least Square (OLS).
+We will use a very simple model called ***Ordinary Least Square (OLS)***.
 It's one of the most fundamental models in Machine Learning and statistics — specifically in the context of linear regression.
 
 ### 🔍 What is OLS?
@@ -51,5 +51,10 @@ You should get the following :
 Line slope: 0.5859254167382709
 Line Intercept: 5.719109812682601
 
+![Model Summary](images/ModelResults.pdf)
+
+Now we can also see it by plotting. The following graph shows the original data as circles with a red line through it. The red line shows our model.
+We can look at this line to understand our model. For example, we can see that as harness size increases, so does the estimated boot size.
 
 
+![Model Visualization](images/Graph.png)

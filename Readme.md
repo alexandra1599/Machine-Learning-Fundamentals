@@ -51,7 +51,7 @@ You should get the following :
 Line slope: 0.5859254167382709
 Line Intercept: 5.719109812682601
 
-![Model Summary](images/ModelResults.pdf)
+![Model Summary](images/Model_Summary.png)
 
 Now we can also see it by plotting. The following graph shows the original data as circles with a red line through it. The red line shows our model.
 We can look at this line to understand our model. For example, we can see that as harness size increases, so does the estimated boot size.

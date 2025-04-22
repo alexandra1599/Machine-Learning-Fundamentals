@@ -58,3 +58,9 @@ We can look at this line to understand our model. For example, we can see that a
 
 
 ![Model Visualization](images/Graph.png)
+
+## STEP 4 : USE THE MODEL 
+
+The final step is to use the model to predict a dog's boot size from their harness size.
+For example, by looking at the red line, we can see that that a harness size of 52.5 (x axis) corresponds to a boot size of about 36.5 (y axis).
+We don't have to do this by eye, though. We can use the model in our program to predict any boot size we like.

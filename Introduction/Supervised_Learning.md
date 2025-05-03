@@ -79,4 +79,41 @@ $\theta_0 \in \mathbb{R}$
 
 $\theta$ and $\theta_0$ specify a hyperplane.
 
-!RLC
+![RLC](RLC.png)
+
+## Hyperplanes
+
+**1) Hyperplane through Origin :**
+
+Any vector $\theta \in \mathbb{R}^d$ can define a hyperplane. Hyperplane through origin associated with $\theta$ is the set of all vectors $x \in \mathbb{R}^d$ such that
+$\theta^{T} x = 0$
+
+The **normal vecrtor** to a hyperplane is given by $\theta^{T} x = 0$. Here $\theta$ is the normal vector.
+
+To get a **Unit Vector normal** to a hyperplane in $\mathbb{R}^d$ , we normalize $\theta$
+
+$$
+u = \frac{\theta}{||\theta||}
+$$
+
+**2) General Hyperplane, distance to origin :**
+
+Consider hyperplanes defined by $\theta^{T} x + \theta_0 = 0$ . Define the **positive side** of a hyperplane to be the half space defined by 
+$x | \theta^{T} x + \theta_0 > 0$
+
+***Distance from hyperplane to origin*** should be :
+- =0 if on the hyperplane
+-  \>0 if origin is on positive side of hyperplane
+-  <0 if origin is on negative side of hyperplane
+
+**Signed Distance from a point x to hyperplane :**
+
+$$
+\frac{\theta^{T} x_0 + \theta_0}{||\theta||}
+$$
+
+**Signed Distance from origin to hyperplane :**
+
+$$
+\frac{\theta_0}{||\theta||}
+$$

@@ -50,4 +50,4 @@ Computational process to fit model to data and/or make predictions ?
 ML is a subset of Artificial Intelligence (AI) concerned with using specialized algorithms to uncover meaningful information and find hidden patterns from perceived data to corroborate the rational decision making process.
 The model is the core component of ML and can be built in many ways. Rather than being edited by people so they work well, ML models are **shaped by data**.
 
-
+![Model](images/Model.png)

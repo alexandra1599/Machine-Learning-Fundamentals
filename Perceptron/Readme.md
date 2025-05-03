@@ -108,3 +108,6 @@ In other words, the margin of D with respect to $\theta^{\ast}$ is $M \geq \gamm
   **NOTE :** To transform **ANY** dataset that is only linearly separable **WITH** an offset to a dataset that is linearly separable **WITHOUT** an offset, add an extra dimension to all 
   datapoints using the same non-zero number for each point
 
+## 6. Averaged Perceptron
+
+Regular perceptron can be sensitive to the most recent examples that it sees. Averaged perceptron has more stable output : average value of $\theta$ , $\theta_0$ across all iterations.

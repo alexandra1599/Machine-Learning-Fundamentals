@@ -42,6 +42,10 @@ You can use the [API](https://scikit-learn.org/stable/api/index.html) to build M
 
 ***EXAMPLE : ordinary least squares (OLS) with Linear Regression :***
 
+Imagine that you wanted to test a treatment for diabetic patients. Machine Learning models might help you determine which patients would respond better to the treatment, based on combinations of variables. Even a very basic regression model, when visualized, might show information about variables that would help you organize your theoretical clinical trials.
+
+There are many types of regression methods, and which one you pick depends on the answer you're looking for. If you want to predict the probable height for a person of a given age, you'd use ***linear regression***, as you're seeking a ***numeric value***. If you're interested in discovering whether a type of cuisine should be considered vegan or not, you're looking for a ***category assignment*** so you would use ***logistic regression***.
+
 Use a single feature (for simplicity) from the diabetes dataset and try to predict the diabetes progression using this linear model. 
 STEP 1 : Load dataset and split into train and test sets
 

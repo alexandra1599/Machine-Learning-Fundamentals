@@ -102,6 +102,7 @@ fig.suptitle("Linear Regression")
 plt.show()
 ```
 
+![Model Results](Model_Results.png)
 
 The trained model corresponds to the estimator that minimizes the mean squared error between the predicted and the true target values on the training data. We therefore obtain an estimator of the conditional mean of the target given the data.
 

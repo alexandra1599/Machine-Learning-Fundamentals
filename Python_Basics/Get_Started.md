@@ -37,3 +37,72 @@ Install Visual Studio Code. Make sure you have Visual Studio Code installed on y
 [Scikit-learn](https://scikit-learn.org/stable/getting_started.html) is an open source machine learning library that supports supervised and unsupervised learning. It also provides various tools for model fitting, data preprocessing, model selection and evaluation, and many other utilities.
 Scikit-learn makes it straightforward to build models and evaluate them for use. It is primarily focused on using numeric data and contains several ready-made datasets for use as learning tools. It also includes pre-built models for students to try. 
 To import the Scikit-learn library in your code, use ***import sklearn***.
+
+You can use the [API](https://scikit-learn.org/stable/api/index.html) to build ML models. Scikit-learn makes it straightforward to build models and evaluate them for use. It is primarily focused on using numeric data and contains several ready-made datasets for use as learning tools.
+
+***EXAMPLE : ordinary least squares (OLS) with Linear Regression :***
+
+Use a single feature (for simplicity) from the diabetes dataset and try to predict the diabetes progression using this linear model. 
+STEP 1 : Load dataset and split into train and test sets
+
+```
+from sklearn.datasets import load_diabetes
+from sklearn.model_selection import train_test_split
+
+X, y = load_diabetes(return_X_y=True)
+X = X[:, [2]]  # Use only one feature
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=20, shuffle=False)
+```
+STEP 2 : Create a linear regression model and fit it on the training data. Note that by default, an intercept is added to the model. We can control this behavior by setting the fit_intercept parameter.
+
+```
+from sklearn.linear_model import LinearRegression
+
+regressor = LinearRegression().fit(X_train, y_train)
+```
+STEP 3 : Evaluate the model’s performance on the test set using the mean squared error and the coefficient of determination.
+
+```
+from sklearn.metrics import mean_squared_error, r2_score
+
+y_pred = regressor.predict(X_test)
+
+print(f"Mean squared error: {mean_squared_error(y_test, y_pred):.2f}")
+print(f"Coefficient of determination: {r2_score(y_test, y_pred):.2f}")
+```
+Your ouput should be :
+Mean squared error: 2548.07
+Coefficient of determination: 0.47
+
+STEP 4 : Visualize the results 
+
+```
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(ncols=2, figsize=(10, 5), sharex=True, sharey=True)
+
+ax[0].scatter(X_train, y_train, label="Train data points")
+ax[0].plot(
+    X_train,
+    regressor.predict(X_train),
+    linewidth=3,
+    color="tab:orange",
+    label="Model predictions",
+)
+ax[0].set(xlabel="Feature", ylabel="Target", title="Train set")
+ax[0].legend()
+
+ax[1].scatter(X_test, y_test, label="Test data points")
+ax[1].plot(X_test, y_pred, linewidth=3, color="tab:orange", label="Model predictions")
+ax[1].set(xlabel="Feature", ylabel="Target", title="Test set")
+ax[1].legend()
+
+fig.suptitle("Linear Regression")
+
+plt.show()
+```
+
+
+The trained model corresponds to the estimator that minimizes the mean squared error between the predicted and the true target values on the training data. We therefore obtain an estimator of the conditional mean of the target given the data.
+
+Note that in higher dimensions, minimizing only the squared error might lead to overfitting. Therefore, regularization techniques are commonly used to prevent this issue, such as those implemented in Ridge or Lasso.

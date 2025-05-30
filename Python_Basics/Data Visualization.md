@@ -60,7 +60,8 @@ We also square the terms before adding them since we are concerned with its magn
 This line, called the line of best fit can be expressed by y = bx+m. X is the 'explanatory variable'. Y is the 'dependent variable'.
 The slope of the line is b and m is the y-intercept, which refers to the value of Y when X = 0.
 
-[!LR](LR.png)
+[!Linear Regression](LR.png)
+
 **Polynomial Regression** is a type of linear regression where y is now modeled as a $n^{th}$ degree polynomial of x. 
 Example :
 $y = m + b_1x + b_2x^2 + ... + b_nx^n$, where the goal is to optimize the coefficients b_1, .. b_n to reduce loss. 

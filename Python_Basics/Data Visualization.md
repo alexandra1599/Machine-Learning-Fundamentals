@@ -46,7 +46,10 @@ Models are trained on historic data to automatically capture data dependencies, 
 which the model has not seem before.
 
 We have multiple types of regression models. Two of them are : Linear regression and Polynomial regression.
-**Linear Regression** establishes establishes a linear relationship between x and y (Ex: y = bx+m), where the goal is to optimize the slope (b)
+
+## **Linear Regression** 
+
+Linear Regression establishes establishes a linear relationship between x and y (Ex: y = bx+m), where the goal is to optimize the slope (b)
 to minimize the cost.
 The goal of a linear regression exercise is to be able to plot a line to:
 - Show variable relationships.
@@ -62,7 +65,9 @@ The slope of the line is b and m is the y-intercept, which refers to the value o
 
 ![Linear Regression](LR.png)
 
-**Polynomial Regression** is a type of linear regression where y is now modeled as a $n^{th}$ degree polynomial of x. 
+## **Polynomial Regression** 
+
+Polynomial Regression is a type of linear regression where y is now modeled as a $n^{th}$ degree polynomial of x. 
 Example :
 $y = m + b_1x + b_2x^2 + ... + b_nx^n$, where the goal is to optimize the coefficients b_1, .. b_n to reduce loss. 
 
@@ -73,3 +78,24 @@ $y = m + b_1x + b_2x^2 + ... + b_nx^n$, where the goal is to optimize the coeffi
 We will now study the Correlation Coefficient between given X and Y variables. Using a scatterplot, you can quickly visualize this coefficient. A plot with datapoints scattered in a neat line have high correlation, but a plot with datapoints scattered everywhere between X and Y have a low correlation.
 
 A good linear regression model will be one that has a high (nearer to 1 than 0) Correlation Coefficient using the Least-Squares Regression method with a line of regression.
+
+The correlation coefficient measures the strength and direction of a linear relationship between two variables, typically denoted as X and Y. The most commonly used correlation coefficient is the **Pearson correlation coefficient**, denoted by r. Given two variables 
+𝑋 = [𝑥1,𝑥2,...,𝑥𝑛] and 𝑌=[𝑦1,𝑦2,...,𝑦𝑛], the Pearson correlation coefficient is defined as:
+
+$$
+r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2} \sqrt{\sum (y_i - \bar{y})^2}}
+$$
+
+where : 
+$\bar{x} = \frac{1}{n} \sum{x_i}$
+$\bar{y} = \frac{1}{n} \sum{y_i}$
+
+**Notes :**
+- Only linear relationships are measured with Pearson's r.
+- If the relationship is nonlinear, r might be low even if the variables are related.
+- It is unitless: independent of the measurement scale.
+
+In Python, use r = np.corrcoef(x, y).
+
+## Interpretation of r : 
+![r interpretation](R.png)

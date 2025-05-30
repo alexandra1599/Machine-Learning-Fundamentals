@@ -47,7 +47,16 @@ Imagine that you wanted to test a treatment for diabetic patients. Machine Learn
 There are many types of regression methods, and which one you pick depends on the answer you're looking for. If you want to predict the probable height for a person of a given age, you'd use ***linear regression***, as you're seeking a ***numeric value***. If you're interested in discovering whether a type of cuisine should be considered vegan or not, you're looking for a ***category assignment*** so you would use ***logistic regression***.
 
 Use a single feature (for simplicity) from the diabetes dataset and try to predict the diabetes progression using this linear model. 
+
 STEP 1 : Load dataset and split into train and test sets
+The built-in [diabetes dataset](https://scikit-learn.org/stable/datasets/toy_dataset.html#diabetes-dataset) includes 442 samples of data around diabetes, with 10 feature variables, some of which include: 
+- age: age in years
+- bmi: body mass index
+- bp: average blood pressure
+- s1 tc: T-Cells (a type of white blood cells)
+  
+This dataset includes the concept of 'sex' as a feature variable important to research around diabetes. Many medical datasets include this type of binary classification.
+This is ***supervised learning*** so we need the data x and the labels y.
 
 ```
 from sklearn.datasets import load_diabetes
@@ -57,6 +66,9 @@ X, y = load_diabetes(return_X_y=True)
 X = X[:, [2]]  # Use only one feature
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=20, shuffle=False)
 ```
+
+What you are getting back as a response, is a tuple. What you are doing is to assign the two first values of the tuple to X and y respectively.
+
 STEP 2 : Create a linear regression model and fit it on the training data. Note that by default, an intercept is added to the model. We can control this behavior by setting the fit_intercept parameter.
 
 ```

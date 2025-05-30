@@ -60,8 +60,16 @@ We also square the terms before adding them since we are concerned with its magn
 This line, called the line of best fit can be expressed by y = bx+m. X is the 'explanatory variable'. Y is the 'dependent variable'.
 The slope of the line is b and m is the y-intercept, which refers to the value of Y when X = 0.
 
-[!Linear Regression](images/LR.png)
+![Linear Regression](LR.png)
 
 **Polynomial Regression** is a type of linear regression where y is now modeled as a $n^{th}$ degree polynomial of x. 
 Example :
 $y = m + b_1x + b_2x^2 + ... + b_nx^n$, where the goal is to optimize the coefficients b_1, .. b_n to reduce loss. 
+
+![Polynomial Regression](PR.png)
+
+# Correlation 
+
+We will now study the Correlation Coefficient between given X and Y variables. Using a scatterplot, you can quickly visualize this coefficient. A plot with datapoints scattered in a neat line have high correlation, but a plot with datapoints scattered everywhere between X and Y have a low correlation.
+
+A good linear regression model will be one that has a high (nearer to 1 than 0) Correlation Coefficient using the Least-Squares Regression method with a line of regression.

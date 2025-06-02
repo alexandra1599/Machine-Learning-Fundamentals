@@ -50,3 +50,6 @@ $R(\theta) = ||\theta - \theta_{prior}||^2$
 when we have some idea in advance that $\theta$ ought to be near some value $\theta_{prior}$. In the absence of such knowledge, a default is to *regularize toward zero* :
 
 $R(\theta) = \|\|\theta\|\|^2$
+
+## Linear Logistic Classifiers == Logistic Regression
+
